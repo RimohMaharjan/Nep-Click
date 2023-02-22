@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nep Click</title>
+    <link rel="stylesheet" href="./assets/css/Search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <!--header area start-->
+    <header>
+
+        <div class="left_area">
+            <a href="index.html">
+                <img src="./assets/images/main logo.png" alt="logo" class="logo">
+            </a>
+        </div>
+        <div class="right_area">
+            <a href="Signin.html" class="logout_btn">Sign In</a>
+        </div>
+    </header>
+    <!--header area end-->
+
+    <div class="overlay"></div>
+    <!--sidebar start-->
+    <div class="sidebar">
+        <!-- <a href="index.html"><span>Home</span></a> -->
+        <a href="#"><span>Catalouge</span></a>
+        <a href="#"><span>Premium</span></a>
+        <a href="#"><span>Free Picture</span></a>
+        <a href="#"><span>Newsletter</span></a>
+        <a href="#"><span>Blog</span></a>
+        <a href="#"><span>Templates</span></a>
+        <a href="#"><span>Favourites</span></a>
+        <a href="#"><span>About</span></a>
+        <a href="#"><span>Legal</span></a>
+        <a href="#"><span>Support</span></a>
+    </div>
+    <!--sidebar end-->
+
+    <div class="search">
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+        <ul id="myUL">
+            <li><img class="image" src="./assets/images/hero-bg.jpg" alt="gdgrtr"></li>
+            <li><img class="image" src="./assets/images/hero-bg.jpg" alt="Nepal"></li>
+            <li><img class="image" src="./assets/images/hero-bg.jpg" alt="Nepal"></li>
+            <li><img class="image" src="./assets/images/hero-bg.jpg" alt="retgrg"></li>
+            <li><img class="image" src="./assets/images/hero-bg.jpg" alt="Nepal"></li>
+            <li><img class="image" src="./assets/images/hero-bg.jpg" alt="Neprgrgdgral"></li>
+            <li><img class="image" src="./assets/images/hero-bg.jpg" alt="Nepal"></li>
+        </ul>
+    </div>
+
+
+    <script type="text/javascript">
+        function myFunction() {
+            var input, filter, ul, li, img, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+
+            for (i = 0; i < li.length; i++) {
+                img = li[i].getElementsByTagName("img")[0];
+                txtValue = img.getAttribute('alt');
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

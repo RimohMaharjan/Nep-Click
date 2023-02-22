@@ -168,6 +168,7 @@ label #sidebar_btn:hover {
   width: 98.7vw;
   height: 97.3vh;
   background-color: #00000090;
+  position: absolute;
 }
 
 .overlay2 {
